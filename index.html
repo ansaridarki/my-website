@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>ورود</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      direction: rtl;
+      margin: 0;
+    }
+
+    .login-container {
+      background-color: #1e1e1e;
+      padding: 40px;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 16px;
+      margin: 10px 0;
+      background-color: #2a2a2a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      font-size: 16px;
+      color: white;
+    }
+
+    button {
+      width: 100%;
+      padding: 16px;
+      background-color: #6200ee;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #3700b3;
+    }
+
+    .signup-link {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .signup-link a {
+      color: #bb86fc;
+      text-decoration: none;
+    }
+
+    .signup-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h1>ورود به حساب</h1>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="نام کاربری" required>
+      <input type="password" id="password" placeholder="رمز عبور" required>
+      <button type="submit">ورود</button>
+    </form>
+    <div class="signup-link">
+      حساب کاربری ندارید؟ <a href="signup.html">ثبت‌نام</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const enteredUsername = document.getElementById("username").value.trim();
+      const enteredPassword = document.getElementById("password").value;
+
+      const savedUsername = localStorage.getItem("savedUsername");
+      const savedPassword = localStorage.getItem("savedPassword");
+
+      if (enteredUsername === savedUsername && enteredPassword === savedPassword) {
+        alert("خوش آمدید!");
+        setTimeout(() => {
+          window.location.href = "dashboard.html"; // یا هر صفحه‌ای که خودت ساختی
+        }, 1000);
+      } else {
+        alert("نام کاربری یا رمز عبور اشتباه است!");
+      }
+    });
+  </script>
+
+</body>
+</html>

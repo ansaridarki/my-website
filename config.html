@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <title>کانفیگ‌های V2Ray</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
+
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: 'Vazirmatn', sans-serif;
+      margin: 0;
+      padding: 20px;
+      direction: rtl;
+    }
+
+    header {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: #bb86fc;
+      margin-bottom: 30px;
+    }
+
+    .config-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .config-card {
+      background-color: #1f1b24;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(187, 134, 252, 0.2);
+      position: relative;
+    }
+
+    .config-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #bb86fc;
+      margin-bottom: 10px;
+    }
+
+    .config-text {
+      word-break: break-all;
+      font-size: 14px;
+      background-color: #2a2a2a;
+      padding: 10px;
+      border-radius: 8px;
+      color: #ddd;
+      margin-bottom: 10px;
+      user-select: text;
+    }
+
+    .copy-btn {
+      background-color: #6200ee;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .copy-btn:hover {
+      background-color: #3700b3;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-bottom: 30px;
+      background-color: #6200ee;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .back-button:hover {
+      background-color: #3700b3;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="dashboard.html" class="back-button">← بازگشت به داشبورد</a>
+
+  <header>کانفیگ‌های پرسرعت V2Ray</header>
+
+  <div class="config-list">
+
+    <div class="config-card">
+      <div class="config-title">🇨🇦 کانادا - همه اپراتورها</div>
+      <div class="config-text" id="config1">
+vless://20dbb386-c5d1-4509-b33e-ccf77d235792@mza2tu.lizardshop.org:2060?security=reality&type=grpc&headerType=&serviceName=2060vless&authority=&mode=gun&sni=www.digikala.com&fp=chrome&pbk=vbuJqtlEuVyhIL0xBwJ-YW29c9awmmFC5jHlQGMccUg&sid=36da09a28c478876#|🇨🇦|-Canada%20همه%20اپراتور%20ها
+      </div>
+      <button class="copy-btn" onclick="copyConfig('config1')">📋 کپی</button>
+    </div>
+
+    <div class="config-card">
+      <div class="config-title">🇩🇪 آلمان - پایدار</div>
+      <div class="config-text" id="config2">
+vless://20dbb386-c5d1-4509-b33e-ccf77d235792@mzatu3.lizard2shop.com:2060?security=reality&type=grpc&headerType=&serviceName=2060vless&authority=&mode=gun&sni=www.digikala.com&fp=chrome&pbk=vbuJqtlEuVyhIL0xBwJ-YW29c9awmmFC5jHlQGMccUg&sid=36da09a28c478876#%7C%F0%9F%87%A9%F0%9F%87%AA%7C-germany%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%20%D9%87%D8%A7
+      </div>
+      <button class="copy-btn" onclick="copyConfig('config2')">📋 کپی</button>
+    </div>
+
+    <div class="config-card">
+      <div class="config-title">🇯🇵 فنلاند - سرعت بالا</div>
+      <div class="config-text" id="config3">
+vless://20dbb386-c5d1-4509-b33e-ccf77d235792@aafc2.lizard2shop.com:2083?security=tls&type=ws&headerType=&path=%2F%3Fed%3D2560&host=mzax5.lizardshop.org&sni=mzax5.lizardshop.org&fp=chrome#%7C%F0%9F%87%AB%F0%9F%87%AE%7C-Finland%20%D9%87%D9%85%D8%B1%D8%A7%D9%87%20%D8%A7%D9%88%D9%84%20
+      </div>
+      <button class="copy-btn" onclick="copyConfig('config3')">📋 کپی</button>
+    </div>
+
+    <div class="config-card">
+      <div class="config-title">🇺🇸 انگلیس - استیبل</div>
+      <div class="config-text" id="config4">
+vless://20dbb386-c5d1-4509-b33e-ccf77d235792@mza2.lizardshop.org:2052?security=reality&type=grpc&headerType=&serviceName=xyz&authority=&mode=gun&sni=wordpress.org&fp=chrome&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&sid=#%7C%F0%9F%87%AC%F0%9F%87%A7%7C-United%20Kingdom%202%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%D8%B3%D9%84
+      </div>
+      <button class="copy-btn" onclick="copyConfig('config4')">📋 کپی</button>
+    </div>
+
+    <div class="config-card">
+      <div class="config-title">🇫🇷 فنلاند همراه اول - اقتصادی</div>
+      <div class="config-text" id="config5">
+vless://20dbb386-c5d1-4509-b33e-ccf77d235792@aafc4.lizard2shop.com:2083?security=tls&type=ws&headerType=&path=%2F%3Fed%3D2560&host=mzax5.lizardshop.org&sni=mzax5.lizardshop.org&fp=chrome#%7C%F0%9F%87%AB%F0%9F%87%AE%7C-Finland%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%D8%B3%D9%84
+      </div>
+      <button class="copy-btn" onclick="copyConfig('config5')">📋 کپی</button>
+    </div>
+
+    <div class="config-card">
+      <div class="config-title">🇸🇬 آمریکا - گیمینگ</div>
+      <div class="config-text" id="config6">
+vless://20dbb386-c5d1-4509-b33e-ccf77d235792@us.lizard2shop.com:2060?security=reality&type=grpc&headerType=&serviceName=2060vless&authority=&mode=gun&sni=www.digikala.com&fp=chrome&pbk=vbuJqtlEuVyhIL0xBwJ-YW29c9awmmFC5jHlQGMccUg&sid=36da09a28c478876#%7C%F0%9F%87%BA%F0%9F%87%B8%7C-USA%20%D9%87%D9%85%D9%87%20%D8%A7%D9%BE%D8%B1%D8%A7%D8%AA%D9%88%D8%B1%20%D9%87%D8%A7
+      </div>
+      <button class="copy-btn" onclick="copyConfig('config6')">📋 کپی</button>
+    </div>
+
+  </div>
+
+  <script>
+    function copyConfig(id) {
+      const config = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(config).then(() => {
+        alert('کانفیگ کپی شد ✅');
+      });
+    }
+  </script>
+
+</body>
+</html>

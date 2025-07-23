@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <title></title>به سایت vecna خوش آمدید</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
+
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: 'Vazirmatn', sans-serif;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+
+    .dashboard-header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #bb86fc;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: #1f1b24;
+      border: 1px solid #2c2c2c;
+      border-radius: 16px;
+      width: 180px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(187, 134, 252, 0.2);
+      color: #ffffff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(187, 134, 252, 0.4);
+    }
+
+    .card:active {
+      transform: scale(0.98);
+    }
+
+    /* ======= بخش پست های اینستاگرام ======= */
+
+    .instagram-posts-section {
+      max-width: 900px;
+      margin: 40px auto 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    .insta-post {
+      background-color: #1f1b24;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(187, 134, 252, 0.2);
+      color: #ddd;
+      font-size: 16px;
+      user-select: none;
+    }
+
+    .insta-post img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .post-content {
+      padding: 15px 20px 20px;
+    }
+
+    .post-content p {
+      margin: 0 0 12px 0;
+      line-height: 1.5;
+    }
+
+    .post-actions {
+      display: flex;
+      gap: 20px;
+    }
+
+    .post-actions button {
+      background: transparent;
+      border: none;
+      color: #bb86fc;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.3s ease;
+    }
+
+    .post-actions button:hover {
+      color: #e754fd;
+    }
+
+    .post-actions .like-btn.liked {
+      color: #ff4660;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dashboard-header">به سایت vecna خوش آمدید</div>
+
+  <div class="card-container">
+    <a href="proxy.html" class="card">پروکسی</a>
+    <a href="config.html" class="card">کانفینگ</a>
+    <a href="#" class="card" onclick="alert('این بخش در دست ساخت می‌باشد 🚧'); return false;">فروشگاه</a>
+    <a href="zula-cheat.html" class="card">چیت زولا</a>
+  </div>
+
+  <!-- بخش پست های اینستاگرام -->
+  <div class="instagram-posts-section">
+
+    <div class="insta-post">
+      <img src="https://www.datisnetwork.com/wp-content/uploads/2020/11/Cheat-Zula.jpg" alt="عکس پست اول" />
+      <div class="post-content">
+        <p>برای خرید یا استفاده از چیت رایگان وارد چنل تلگرام من به آیدی https://t.me/zula_vecna_1899.</p>
+        <div class="post-actions">
+          <button class="like-btn">❤️ <span class="like-count">0</span></button>
+          <button class="comment-btn">💬 3</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="insta-post">
+      <img src="https://cdn.ilna.ir/thumbnail/n4fcGJyN8GGb/YdHYY4gWkVxziNocTLLHoQVar3TrxmvO0e6SENMutiBXz7JNO2nT2KLgCR9h7O_-yMtFV2AKWHv4l_4LeI27Qq4xQIoDjB_gIQDHEiqNepRBeBVXNnV0poVjISVkiiPi7otfNPZWXfo,/image_191158ee7951f5c537652a94b8be293de8036d46+%281%29.jpg" alt="عکس پست دوم" />
+      <div class="post-content">
+        <p>برای خرید یا استفاده از چیت رایگان وارد چنل تلگرام من به آیدی https://t.me/zula_vecna_1899.</p>
+        <div class="post-actions">
+          <button class="like-btn">❤️ <span class="like-count">0</span></button>
+          <button class="comment-btn">💬 5</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    document.querySelectorAll('.like-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        button.classList.toggle('liked');
+        const countSpan = button.querySelector('.like-count');
+        let count = parseInt(countSpan.textContent);
+        if(button.classList.contains('liked')) {
+          count++;
+        } else {
+          count--;
+        }
+        countSpan.textContent = count;
+      });
+    });
+  </script>
+
+</body>
+</html>

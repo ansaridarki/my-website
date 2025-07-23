@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <title>لیست پروکسی‌ها</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
+
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: 'Vazirmatn', sans-serif;
+      margin: 0;
+      padding: 20px;
+      direction: rtl;
+    }
+
+    header {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: #bb86fc;
+      margin-bottom: 30px;
+    }
+
+    .proxy-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .proxy-card {
+      background-color: #1f1b24;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(187, 134, 252, 0.2);
+      transition: box-shadow 0.3s ease;
+      cursor: default;
+    }
+
+    .proxy-card:hover {
+      box-shadow: 0 8px 30px rgba(187, 134, 252, 0.5);
+    }
+
+    .proxy-ip {
+      font-size: 20px;
+      font-weight: bold;
+      color: #bb86fc;
+      margin-bottom: 10px;
+      word-break: break-word;
+    }
+
+    .proxy-details {
+      font-size: 16px;
+      color: #ccc;
+      user-select: text;
+    }
+
+    /* دکمه بازگشت */
+    .back-button {
+      display: inline-block;
+      margin-bottom: 30px;
+      background-color: #6200ee;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .back-button:hover {
+      background-color: #3700b3;
+    }
+
+    /* واکنش‌گرا */
+    @media (max-width: 600px) {
+      .proxy-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="dashboard.html" class="back-button">← بازگشت به داشبورد</a>
+
+  <header>لیست پروکسی‌های بروز</header>
+
+  <div class="proxy-list">
+  <a href="tg://proxy?server=87.248.134.48&port=70&secret=eed77db43ee3721f0fcb40a4ff63b5cd276D656469612E737465616D706F77657265642E636F6D" class="proxy-card">
+    <div class="proxy-ip">87.248.134.48:70</div>
+    <div class="proxy-details">کشور: روسیه<br>نوع: MTProto</div>
+  </a>
+
+     <a href="tg://proxy?server=87.248.134.34&port=eed77db43ee3721f0fcb40a4ff63b5cd276D656469612E737465616D706F77657265642E636F6D" class="proxy-card">
+    <div class="proxy-ip">87.248.134.34:70</div>
+    <div class="proxy-details">کشور: آلمان<br>نوع: MTProto</div>
+  </a>
+
+     <a href="tg://proxy?server=87.248.132.42&port=200&secret=eed77db43ee3721f0fcb40a4ff63b5cd276D656469612E737465616D706F77657265642E636F6D" class="proxy-card">
+    <div class="proxy-ip">87.248.132.42:200</div>
+    <div class="proxy-details">کشور: ژاپن<br>نوع: MTProto</div>
+  </a>
+
+     <a href="tg://proxy?server=Allow-more-english-support.kqmusic.ir.&port=9741&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d" class="proxy-card">
+    <div class="proxy-ip">Allow-more-english-support.kqmusic.ir:9741</div>
+    <div class="proxy-details">کشور: دانمارک<br>نوع: MTProto</div>
+  </a>
+
+     <a href="tg://proxy?server=dwonload-netspeed-for-tests.iomusices.ir.&port=9741&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d" class="proxy-card">
+    <div class="proxy-ip">dwonload-netspeed-for-tests.iomusices.ir.:9741</div>
+    <div class="proxy-details">کشور: نروژ<br>نوع: MTProto</div>
+  </a>
+
+   <a href="tg://proxy?server=web.parsa-learning.ir.&port=443&secret=abcdef0123456789abcdef0123456789" class="proxy-card">
+    <div class="proxy-ip">web.parsa-learning.ir.:443</div>
+    <div class="proxy-details">کشور: هند<br>نوع: MTProto</div>
+  </a>
+
+</body>
+</html>

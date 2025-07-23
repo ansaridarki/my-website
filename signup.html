@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <title>ثبت‌نام</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      direction: rtl;
+      margin: 0;
+    }
+    .container {
+      background-color: #1e1e1e;
+      padding: 40px;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 16px;
+      margin: 10px 0;
+      background-color: #2a2a2a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      font-size: 16px;
+      color: white;
+    }
+    button {
+      width: 100%;
+      padding: 16px;
+      background-color: #03dac6;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #018786;
+    }
+    /* پیام موفقیت */
+    #successMessage {
+      margin-top: 15px;
+      color: #4caf50; /* سبز */
+      font-weight: bold;
+      text-align: center;
+      display: none; /* مخفی در ابتدا */
+      animation: fadeIn 0.6s ease forwards;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>ثبت‌نام</h1>
+    <form id="signupForm">
+      <input type="text" id="username" placeholder="نام کاربری" required />
+      <input type="password" id="password" placeholder="رمز عبور" required />
+      <button type="submit">ثبت‌نام</button>
+    </form>
+    <div id="successMessage"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById('signupForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value;
+
+      if (!username || !password) {
+        alert('لطفاً همه فیلدها را پر کنید.');
+        return;
+      }
+
+      localStorage.setItem("savedUsername", username);
+      localStorage.setItem("savedPassword", password);
+
+      successMessage.textContent = "ثبت‌نام با موفقیت انجام شد! در حال انتقال به صفحه ورود...";
+      successMessage.style.display = "block";
+
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 2500);
+    });
+  </script>
+</body>
+</html>
